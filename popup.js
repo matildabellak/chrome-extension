@@ -5,10 +5,22 @@ function clickHandler() {
 
 
 
+
 window.onload = function(){ 
-    document.getElementById('btn_div').onclick = function () {
-    document.getElementById('changed_div').style.backgroundColor = '#242424';
-}
+	var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://www.bbc.com/", true);
+    xhr.onreadystatechange = function() {
+    	if (xhr.readyState == 4) {
+    	// WARNING! Might be injecting a malicious script!
+    	document.getElementById("changed_div").innerHTML = xhr.responseText;
+        }
+    }
+
+    xhr.send();
+
+
+    //document.getElementById('btn_div').onclick = function () {
+    //document.getElementById('changed_div').style.backgroundColor = '#242424';
 };
 
 
