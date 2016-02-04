@@ -1,6 +1,6 @@
 	{
-		"name"	:	"",
-		"description"	:	"",
+		"name"	:	"my-first-plugin",
+		"description"	:	"My first chrome extension",
 		"version"	:	"0.1",
 
 		"background_page"	:	"background.html",
